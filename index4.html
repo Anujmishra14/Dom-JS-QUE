@@ -28,13 +28,20 @@
         <div class="question1BOX">
           <h1> Q.4 Change the heading from "Hello" to "Hello World" using DOM
             functions"</h1>
-            <h2 id="change">Hello</h2>
-            <input type="button" value="click here" onclick="replace()">
+            <h1 class="changetext">Hello</h1>
+            <!-- <input type="button" value="click here" onclick="replace()"> -->
             
         </div>
         </div>
       
    </section>
-      <script src="./javascript.js"></script>        
+      <script>
+          (function (){
+              let newtext=document.querySelector(".changetext")
+             console.log(newtext)
+             newtext.innerText="Hello World"
+            newtext.style.color="purple"
+           })()
+      </script>        
 </body>
 </html>

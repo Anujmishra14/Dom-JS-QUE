@@ -80,14 +80,29 @@ a{
     width: 100%;
     
 }
-/* .imgfirst{
-    position: relative;
-    top: 50px;
-    height: 60px;
-    left: 25px;
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
 }
-.imgsec{
-    position: relative;
-    top: 70px;
-    left: 150px;
-} */
+.parent div{
+    text-align: center;
+       height: 50px;
+       width: 80px;
+       background-color: rgb(204, 219, 219);
+       
+}
+#timer{
+    font-size: 80px;
+    color: white;
+    /* background-color: aqua; */
+}
+li{
+ color: red;
+}
+td{
+    text-align: center;
+    color: rgb(136, 8, 8);
+}

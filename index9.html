@@ -11,6 +11,8 @@
    <header>
      <h1  class="top"><img class="firstimg" src="./DOM-Js coading assignment.png">DOM - JS Coding Assessment</h1>
    </header>
+     <hr>
+
    
    <section class="main-container">
         <div class="sidebar-container">
@@ -28,10 +30,33 @@
         <div class="question1BOX">
           <h1> Q.9 Write code to implement timer clock using JS -- display HH:MM:SS
             -- the time should keep updating every second?</h1>
+            <p id="timer"></p>
         </div>
+        
+       
         </div>
       
    </section>
-             
+             <script>
+              function updateTimer() {
+                var now = new Date();
+                var hours = now.getHours().toString().padStart(2, '0');
+                var minutes = now.getMinutes().toString().padStart(2, '0');
+                var seconds = now.getSeconds().toString().padStart(2, '0');
+                var AMPM= "AM";
+                
+                
+                if(hours>12){
+                  hours-=12;
+                  AMPM="PM";
+                }
+                
+                var timeString = hours + ':' + minutes + ':' + seconds + " "+ AMPM; 
+                
+                document.getElementById('timer').textContent = timeString;
+
+            }
+             setInterval(updateTimer,1000)
+             </script>
 </body>
 </html>
